@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cloudflare WARP — Download</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap');
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: #000;
+    color: #fff;
+    font-family: 'Inter', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .container {
+    text-align: center;
+    max-width: 600px;
+    padding: 40px 24px;
+  }
+
+  .icon {
+    width: 80px; height: 80px;
+    margin: 0 auto 32px;
+    background: linear-gradient(135deg, #f6821f, #fbad41);
+    border-radius: 20px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 36px;
+    box-shadow: 0 0 40px rgba(246,130,31,0.3);
+  }
+
+  h1 {
+    font-size: 36px;
+    font-weight: 800;
+    letter-spacing: -1px;
+    margin-bottom: 8px;
+  }
+
+  .subtitle {
+    font-size: 14px;
+    color: #666;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    margin-bottom: 48px;
+  }
+
+  .cards {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #0a0a0a;
+    border: 1px solid #1a1a1a;
+    border-radius: 12px;
+    padding: 24px 28px;
+    text-decoration: none;
+    color: #fff;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(246,130,31,0.05), transparent);
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+
+  .card:hover {
+    border-color: #f6821f;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px rgba(246,130,31,0.15);
+  }
+
+  .card:hover::before { opacity: 1; }
+
+  .card-info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .card-title {
+    font-size: 18px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .badge {
+    font-size: 10px;
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-weight: 600;
+    letter-spacing: 1px;
+  }
+
+  .badge-new {
+    background: rgba(246,130,31,0.15);
+    color: #f6821f;
+  }
+
+  .badge-old {
+    background: rgba(255,255,255,0.06);
+    color: #555;
+  }
+
+  .card-meta {
+    font-size: 13px;
+    color: #444;
+  }
+
+  .btn {
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    transition: all 0.3s;
+    white-space: nowrap;
+    position: relative;
+    z-index: 1;
+  }
+
+  .btn-primary {
+    background: #f6821f;
+    color: #000;
+  }
+
+  .card:hover .btn-primary {
+    background: #fbad41;
+    box-shadow: 0 0 20px rgba(246,130,31,0.4);
+  }
+
+  .btn-ghost {
+    background: transparent;
+    color: #555;
+    border: 1px solid #222;
+  }
+
+  .card:hover .btn-ghost {
+    color: #888;
+    border-color: #444;
+  }
+
+  .footer {
+    margin-top: 48px;
+    font-size: 12px;
+    color: #333;
+    letter-spacing: 2px;
+  }
+
+  @media (max-width: 500px) {
+    .card { flex-direction: column; gap: 16px; text-align: center; }
+    h1 { font-size: 28px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <div class="icon">☁️</div>
+  <h1>Cloudflare WARP</h1>
+  <p class="subtitle">Download Center</p>
+
+  <div class="cards">
+    <a class="card" href="Cloudflare_WARP_2026.4.1390.0.msi" download>
+      <div class="card-info">
+        <div class="card-title">
+          v2026.4.1390.0
+          <span class="badge badge-new">LATEST</span>
+        </div>
+        <div class="card-meta">离线安装包 · 50MB · 2026-06-17</div>
+      </div>
+      <span class="btn btn-primary">DOWNLOAD</span>
+    </a>
+
+    <a class="card" href="Cloudflare_WARP_Setup.msi" download>
+      <div class="card-info">
+        <div class="card-title">
+          Setup 通用版
+          <span class="badge badge-old">OLD</span>
+        </div>
+        <div class="card-meta">在线引导器 · 50MB · 2026-05-23</div>
+      </div>
+      <span class="btn btn-ghost">DOWNLOAD</span>
+    </a>
+  </div>
+
+  <p class="footer">CLOUDFLARE · ONE CLICK</p>
+</div>
+
+</body>
+</html>
